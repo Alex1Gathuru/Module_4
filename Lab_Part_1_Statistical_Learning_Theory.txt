@@ -1,0 +1,39 @@
+1.Define the concept of generalization in the context of statistical learning theory.
+a.What does it mean for a model to generalize well?
+It provides a mathematical framework to understand and design algorithms that learn patterns from data.By focusing on prediction and generalization,statistical learning helps data scientists build models that perform well not only on known data but also on unseen data.Hence generalization is evaluating how a model performs on unseen data.
+b.Why is generalization important when building predictive models, especially in  real-world business applications?
+For example in Finance industry fraud detection algorithms must generalize well to prevent false negatives and false positives,balancing complexity with real-time applicability.
+
+
+
+
+
+2.Explain how you would structure the development of your predictive model to maximize generalization.
+a.Describe the key steps in your model development process that help ensure good generalization.
+Data Preparation: Handle missing values (fill numericals with median, categoricals with mode), cap outliers, encode categorical variables, standardize numerical features, and split the data 80/20 using stratified sampling.
+Model Selection: Start with logistic regression for its interpretability and also test Random Forest to capture non-linear relationships. Analyze feature importance (e.g., low watch hours or many complaints may indicate churn).
+Validation & Optimization: Use k-fold cross-validation with metrics like accuracy, precision, recall, and F1-score. Optimize with regularization (L1/L2) for logistic regression or tune Random Forest parameters, then select the best model.
+Deployment & Monitoring: Deploy the chosen model for real-time churn prediction, monitor performance over time, and update it as customer behavior shifts. Use insights to drive targeted retention strategies.
+b.What specific techniques would you apply to evaluate and improve generalization (e.g., data splitting strategies, cross-validation, regularization)?
+Bias-Variance Tradeoff:The balance between underfitting (high bias) and overfitting (high variance).
+Model Validation:Techniques to evaluate how well a model generalizes to new data.
+Regularization:Adding constraints to a model to prevent overfitting by penalizing complexity.
+Hyperparametric Tuning:Adjusting model parameters to improve performance without overfitting.
+c.How would you detect issues like overfitting or underfitting during the model development process?
+Monitoring: Apply the model in production and continuously monitor its performance.
+Model Validation: Techniques like train-test split and cross-validation to evaluate model performance.
+Bias-Variance Trade-Off: The balance between underfitting (high bias) and overfitting (high variance).
+d.What adjustments would you make if your model exhibited signs of either overfitting or underfitting?
+Optimizing the Model: Adjust parameters for better generalization.
+
+
+
+
+
+
+
+3.Provide a real-world example of how failing to achieve good generalization might negatively impact the business.
+a.Consider the potential business consequences of deploying a churn prediction model that performs well on historical data but poorly on new data.
+A churn model that doesn’t generalize wastes retention budget on the wrong customers, fails to save the right ones, distorts revenue forecasts, and damages trust in data-driven decisions, all while appearing successful on paper.
+b.How could poor generalization affect decision-making, customer retention strategies, and overall business performance?
+Poor generalization turns a model from an asset into a liability. It leads decision-makers to act on false confidence, causes retention budgets to be spent on the wrong customers with the wrong offers, and ultimately raises costs, lowers revenue, and weakens trust in data-driven strategy.
